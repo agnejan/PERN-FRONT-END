@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  /* font-family: 'Lato', sans-serif; */
+}
+
+body {
+  overflow: scroll;
+}
+
+.goBackButton {
+  position: fixed;
+}
+
+.commentsDivider:hover {
+  font-weight: bold;
+}
+
+.appName:hover {
+color: #ebf38b;
+font-weight: bold;
+}
