@@ -12,7 +12,7 @@ function QuoteDetail() {
     const fetchData = async () => {
       console.log("id", id);
       try {
-        const response = await fetch(`http://localhost:5000/quotes/${id}`);
+        const response = await fetch(`https://pern-back-end.vercel.app/quotes/${id}`);
         const data = await response.json();
         setQuote(data);
       } catch (err) {

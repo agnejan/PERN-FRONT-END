@@ -16,7 +16,7 @@ function UserQuotes() {
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,
         },
       };
-      const response = await fetch("http://localhost:5000/myquotes", options);
+      const response = await fetch("https://pern-back-end.vercel.app/myquotes", options);
       const data = await response.json();
       setUserQuotes(data);
     } catch (err) {
@@ -31,7 +31,7 @@ function UserQuotes() {
   // const deleteUserQuote = async (id) => {
   //   try {
   //     const deleteUserQuote = await fetch(
-  //       `http://localhost:5000/myquotes/${id}`,
+  //       `https://pern-back-end.vercel.app/myquotes/${id}`,
   //       { method: "DELETE" }
   //     );
   //     console.log(deleteUserQuote);

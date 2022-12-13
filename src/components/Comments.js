@@ -30,7 +30,7 @@ function Comments(props) {
 
   const readComments = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/quotes/${props.id}/comment`);
+      const response = await fetch(`https://pern-back-end.vercel.app/quotes/${props.id}/comment`);
       const data = await response.json();
       setComments(data);
       console.log((data));
@@ -51,7 +51,7 @@ function Comments(props) {
     e.preventDefault()
    try {
      const body = {comment}
-    const response = await fetch(`http://localhost:5000/quotes/${props.id}/comment`, {
+    const response = await fetch(`https://pern-back-end.vercel.app/quotes/${props.id}/comment`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,

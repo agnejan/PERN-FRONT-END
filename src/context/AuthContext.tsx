@@ -1,7 +1,7 @@
 import { createContext, useState, ReactNode, useEffect } from "react";
 import { NullLiteral } from "typescript";
 
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://pern-back-end.vercel.app";
 
 type User = { name: string; email?: string; id: number; picture: string };
 

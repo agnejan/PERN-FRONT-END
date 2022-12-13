@@ -8,7 +8,7 @@ export const FavoritesContextProvider = (props) => {
 
   const fetchFavorites = async () => {
     try {
-      const response = await fetch("http://localhost:5000/wishlist", {
+      const response = await fetch("https://pern-back-end.vercel.app/wishlist", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,
@@ -29,7 +29,7 @@ export const FavoritesContextProvider = (props) => {
 
   const addToFavorites = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/quotes/${id}/addtowishlist`, {
+      const response = await fetch(`https://pern-back-end.vercel.app/quotes/${id}/addtowishlist`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,
@@ -44,7 +44,7 @@ export const FavoritesContextProvider = (props) => {
 
 const removeFromFavorites = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/quotes/${id}/removefromwishlist`, {
+      const response = await fetch(`https://pern-back-end.vercel.app/quotes/${id}/removefromwishlist`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,

@@ -7,7 +7,7 @@ export const QuotesContextProvider = (props) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/quotes");
+      const response = await fetch("https://pern-back-end.vercel.app/quotes");
       const data = await response.json();
       setQuotes(data);
     } catch (err) {
@@ -28,7 +28,7 @@ export const QuotesContextProvider = (props) => {
     };
     try {
       const deleteUserQuote = await fetch(
-        `http://localhost:5000/myquotes/${id}`,
+        `https://pern-back-end.vercel.app/myquotes/${id}`,
         options
       );
       console.log(deleteUserQuote);

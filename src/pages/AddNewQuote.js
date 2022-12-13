@@ -42,7 +42,7 @@ function AddNewQuote() {
     e.preventDefault();
     try {
       const body = { quote, author, publication, picture, genre };
-      const response = await fetch("http://localhost:5000/newquote", {
+      const response = await fetch("https://pern-back-end.vercel.app/newquote", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,
